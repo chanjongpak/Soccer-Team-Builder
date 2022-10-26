@@ -5,7 +5,11 @@ const teamSchema = new Schema({
   name: String,
   city: String,
   players: [],
-  winrate: Number,
+  winrate: {
+    type: Number,
+    min: 1,
+    max: 100,
+  },
 });
 
 module.exports = mongoose.model("Team", teamSchema);

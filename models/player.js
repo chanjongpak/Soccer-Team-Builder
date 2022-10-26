@@ -5,7 +5,18 @@ const playerSchema = new Schema({
   name: String,
   position: {
     type: String,
-    enum: ["GK", "CB", "RW", "LW", "ST", "SW", "WF", "WB", "RM", "LM"],
+    enum: [
+      "Goalkeeper",
+      "Centerback",
+      "Rightwing",
+      "Leftwing",
+      "Striker",
+      "Sweeper",
+      "Wingforward",
+      "Wingback",
+      "Rightmid",
+      "Leftmid",
+    ],
   },
 });
 

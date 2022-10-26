@@ -1,5 +1,22 @@
 <%- include('../partials/header') %>
 
 <h1>NewPlayer Page!</h1>
+<form id="new-player" action="/players" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name" />
+  <select name="position">
+    <option value="Goalkeeper">Goalkeeper</option>
+    <option value="Centerback">Centerback</option>
+    <option value="Rightwing">Rightwing</option>
+    <option value="Leftwing">Leftwing</option>
+    <option value="Striker">Striker</option>
+    <option value="Sweeper">Sweeper</option>
+    <option value="Wingforward">Wingforward</option>
+    <option value="Wingback">Wingback</option>
+    <option value="Rightmid">Rightmid</option>
+    <option value="Leftmid">Leftmid</option>
+  </select>
+  <input type="submit" value="Add Player" />
+</form>
 
 <%- include('../partials/footer') %>

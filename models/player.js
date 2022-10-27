@@ -18,14 +18,18 @@ const playerSchema = new Schema({
       "Leftmid",
     ],
   },
+  age: Number,
+  totalGoals: { type: Number, default: 0 },
+  ratings: [performanceSchema],
 });
 
 const performanceSchema = new Schema({
   rating: {
+    comment: String,
     type: Number,
     min: 1,
     max: 10,
-    default: 1,
+    default: 5,
   },
 });
 

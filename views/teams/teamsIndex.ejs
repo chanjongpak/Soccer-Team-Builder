@@ -10,7 +10,7 @@
     <tr>
       <th>Team name</th>
       <th>City</th>
-      <th>Winrate</th>
+      <th>Winrate(%)</th>
     </tr>
   </thead>
   <tbody>
@@ -18,7 +18,7 @@
     <tr>
       <td><%= t.name %></td>
       <td><%= t.city %></td>
-      <td><%= t.winrate</td>
+      <td><%= t.winrate %>%</td>
       <td><a href="/teams/<%= t._id %>">Team Roster</a></td>
     </tr>
     <% }); %>

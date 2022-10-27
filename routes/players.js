@@ -7,3 +7,4 @@ module.exports = router;
 router.get("/playersIndex", playersCtrl.index);
 router.get("/newPlayer", playersCtrl.newPage);
 router.post("/", playersCtrl.makePlayer);
+router.get("/:id", playersCtrl.details);

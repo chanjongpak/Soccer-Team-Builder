@@ -1,5 +1,22 @@
 <%- include('../partials/header') %>
 
-<h1>Players Index</h1>
+<h1>List of All Players!</h1>
+<table id="player-list">
+  <thead>
+    <tr>
+      <th>Player Name</th>
+      <th>Position</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% players.forEach(function(p) { %>
+    <tr>
+      <td><%= p.name %></td>
+      <td><%= p.position %></td>
+      <td><a href="/players/<%= p._id %>">Details</a></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
 
 <%- include('../partials/footer') %>

@@ -4,7 +4,9 @@ const Team = require("../models/team");
 module.exports = { index, newPage, makePlayer };
 
 function index(req, res) {
-  res.render("players/playersIndex.ejs");
+  Player.find({}, function (err, players) {
+    res.render("players/playersIndex.ejs", { players });
+  });
 }
 
 function newPage(req, res) {
@@ -13,4 +15,8 @@ function newPage(req, res) {
 
 function makePlayer(req, res) {
   const player = new Player(req.body);
+  player.save(function (err) {
+    if (err) return res.redirect("/players/newPlayer");
+    res.redirect("/players/playersIndex");
+  });
 }

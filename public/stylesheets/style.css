@@ -14,9 +14,108 @@ a {
 
 .home-title {
   text-align: center;
+  font-size: 45px;
   padding-top: 10px;
-  color: rgb(112, 195, 214);
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1px rgb(73, 83, 86);
 }
 
+.player-list-header,
+.viewteam,
+.newplayer,
+.newteam,
+.perf {
+  text-align: center;
+  font-size: 50px;
+  padding: 20px;
+  color: aliceblue;
+  -webkit-text-stroke: 1px rgb(1, 1, 1);
+}
+
+.player-header > th,
+.team-header > th {
+  padding: 3px 40px 10px 5px;
+}
+
+#player-list,
 #team-list {
+  background-color: rgb(240, 248, 255);
+  border: solid 5px rgba(255, 255, 255, 0.416);
+}
+
+.players > td {
+  padding: 5px;
+}
+
+.player-list td:hover {
+  background-color: #ddd;
+}
+
+.players:nth-child(odd),
+.teams:nth-child(odd) {
+  background-color: rgb(221, 245, 233);
+}
+
+.players:nth-child(even),
+.teams:nth-child(even) {
+  background-color: rgb(159, 234, 186);
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.team-header > th,
+.player-header > th {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+form {
+  background-color: rgba(216, 212, 212, 0.773);
+  padding: 10px;
+  max-width: 400px;
+}
+
+#player-detail {
+  padding: 25px;
+}
+
+.odd-div {
+  background-color: aliceblue;
+  padding: 2px;
+  font-size: 18px;
+}
+
+.even-div {
+  background-color: antiquewhite;
+  padding: 2px;
 }

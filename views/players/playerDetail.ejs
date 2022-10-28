@@ -1,19 +1,19 @@
 <%- include('../partials/header') %>
 
-<section id="player-detail">
-  <div>Player Name:</div>
-  <div><%= players.name %></div>
-  <div>Position Played:</div>
-  <div><%= players.position %></div>
-  <div>Age:</div>
-  <div><%= players.age %></div>
-  <div>Total Goals Scored:</div>
-  <div><%= players.totalGoals %></div>
+<section class="detail" id="player-detail">
+  <div class="odd-div">Player Name:</div>
+  <div class="even-div"><%= players.name %></div>
+  <div class="odd-div">Position Played:</div>
+  <div class="even-div"><%= players.position %></div>
+  <div class="odd-div">Age:</div>
+  <div class="even-div"><%= players.age %></div>
+  <div class="odd-div">Total Goals Scored:</div>
+  <div class="even-div"><%= players.totalGoals %></div>
 </section>
 
-<h2>Performance Rating</h2>
+<h2 class="perf">Performance Rating</h2>
 <% if (players.ratings.length) { %>
-<table>
+<table class="rating-table">
   <thead>
     <tr>
       <th>Rating</th>

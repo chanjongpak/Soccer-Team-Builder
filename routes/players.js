@@ -6,6 +6,6 @@ module.exports = router;
 
 router.get("/playersIndex", playersCtrl.index);
 router.get("/newPlayer", playersCtrl.newPage);
-router.post("/teams/:id/players", playersCtrl.addRoster);
 router.post("/players", playersCtrl.makePlayer);
 router.get("/:id", playersCtrl.details);
+router.post("/teams/:id/players", playersCtrl.addRoster);

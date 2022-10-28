@@ -1,16 +1,16 @@
 <%- include('../partials/header') %>
 
-<h1>List of All Players!</h1>
+<h1 class="player-list-header">List of All Players!</h1>
 <table id="player-list">
   <thead>
-    <tr>
+    <tr class="player-header">
       <th>Player Name</th>
       <th>Position</th>
     </tr>
   </thead>
   <tbody>
     <% players.forEach(function(p) { %>
-    <tr>
+    <tr class="players">
       <td><%= p.name %></td>
       <td><%= p.position %></td>
       <td><a href="/players/<%= p._id %>">Details</a></td>

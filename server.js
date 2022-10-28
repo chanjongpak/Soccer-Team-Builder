@@ -8,6 +8,7 @@ require("./config/database");
 var indexRouter = require("./routes/index");
 var playersRouter = require("./routes/players");
 var teamsRouter = require("./routes/teams");
+var ratingsRouter = require("./routes/ratings");
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/players", playersRouter);
 app.use("/teams", teamsRouter);
+app.use("/", ratingsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

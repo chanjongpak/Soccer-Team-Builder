@@ -13,6 +13,26 @@
 
 <h2>Performance Rating</h2>
 <% if (players.ratings.length) { %>
+<table>
+  <thead>
+    <tr>
+      <th>Rating</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let total = 0 %> <% players.ratings.forEach(function(r) { %> <% total +=
+    r.rating %>
+    <tr>
+      <td><%= r.rating %></td>
+      <td><%= r.comment %></td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
+<% } else { %>
+<h3>Rate this Player!</h3>
+<% } %>
 
 <form
   id="performance-rating"
@@ -26,7 +46,7 @@ players._id %>/ratings"
     <option value="2">2</option>
     <option value="3">3</option>
     <option value="4">4</option>
-    <option value="5" selected>5</option>
+    <option value="5">5</option>
     <option value="6">6</option>
     <option value="7">7</option>
     <option value="8">8</option>

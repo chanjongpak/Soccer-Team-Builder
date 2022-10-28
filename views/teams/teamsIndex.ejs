@@ -16,10 +16,9 @@
   <tbody>
     <% teams.forEach(function(t) { %>
     <tr>
-      <td><%= t.name %></td>
+      <td><a href="/teams/<%= t._id %>"><%= t.name %></a></td>
       <td><%= t.city %></td>
       <td><%= t.winrate %>%</td>
-      <td><a href="/teams/<%= t._id %>">Team Roster</a></td>
     </tr>
     <% }); %>
   </tbody>

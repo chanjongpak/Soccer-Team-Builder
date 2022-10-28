@@ -1,8 +1,10 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: url("../images/Soccer-Background.png");
-  background-repeat: no-repeat;
+  background: url(../images/green-soccer-background.jpeg) no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -14,4 +16,7 @@ a {
   text-align: center;
   padding-top: 10px;
   color: rgb(112, 195, 214);
+}
+
+#team-list {
 }

@@ -10,6 +10,7 @@ const teamSchema = new Schema({
     min: 1,
     max: 100,
   },
+  roster: [{ type: Schema.Types.ObjectId, ref: "Player" }],
 });
 
 module.exports = mongoose.model("Team", teamSchema);

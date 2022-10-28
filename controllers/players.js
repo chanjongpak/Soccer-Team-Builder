@@ -1,7 +1,7 @@
 const Player = require("../models/player");
 const Team = require("../models/team");
 
-module.exports = { index, newPage, makePlayer, details };
+module.exports = { index, newPage, makePlayer, details, addRoster };
 
 function index(req, res) {
   Player.find({}, function (err, players) {
@@ -24,5 +24,15 @@ function makePlayer(req, res) {
 function details(req, res) {
   Player.findById(req.params.id, function (err, players) {
     res.render("players/playerDetail", { players });
+  });
+}
+
+function addRoster(req, res) {
+  console.log("got hit");
+  Team.findById(req.params.id, function (err, team) {
+    team.roster.push(req.body.playerId);
+    team.save(function (err) {
+      res.redirect(`/teams/${team._id}`);
+    });
   });
 }

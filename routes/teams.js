@@ -7,3 +7,5 @@ module.exports = router;
 router.get("/teamsIndex", teamsCtrl.index);
 router.get("/newTeam", teamsCtrl.newPage);
 router.post("/", teamsCtrl.makeTeam);
+router.get("/:id", teamsCtrl.teamDetail);
+// router.post("/teams/:id", teamsCtrl.addRoster);

@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<section id="team-detail">
+  <div>Team Name:</div>
+  <div><%= team.name %></div>
+  <div>City of Origin:</div>
+  <div><%= team.city %></div>
+  <div>Current Winrate:</div>
+  <div><%= team.winrate %></div>
+
+  <div>Team Roster:</div>
+  <ul>
+    <%- team.roster.map(p => `
+    <li>${p.name} ${p.position}</li>
+    ` ).join('') %>
+  </ul>
+</section>
+
+<form id="add-to-roster" action="/teams/<%= team._id %>/players" method="POST">
+  <select name="playerId">
+    <%- players.map(p => `
+    <option value="${p._id}" )>${p.name}</option>
+    ` ).join('') %>
+  </select>
+  <input type="submit" value="Add to Roster" />
+</form>
+
+<%- include('../partials/footer') %>

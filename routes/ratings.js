@@ -4,4 +4,4 @@ const ratingsCtrl = require("../controllers/ratings");
 
 module.exports = router;
 
-router.post("/players/:id/reviews", ratingsCtrl.addReview);
+router.post("/players/:id/ratings", ratingsCtrl.addReview);

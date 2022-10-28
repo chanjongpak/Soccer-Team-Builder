@@ -39,6 +39,8 @@
 ![NewTeam](/public/images/MakeNewTeam.png)
 
 #Technology Used
+
+<ul>
 -HTML
 -CSS
 -Javascript
@@ -47,6 +49,7 @@
 -Mongoose
 -MongoDB
 -Express JS
+</ul>
 
 #Future Improvements
 -Improve features regarding updating team roster

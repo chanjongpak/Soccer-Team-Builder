@@ -40,16 +40,14 @@
 
 #Technology Used
 
-<ul>
--HTML
--CSS
--Javascript
--Boostrap
--Node JS
--Mongoose
--MongoDB
--Express JS
-</ul>
+- HTML
+- CSS
+- Javascript
+- Boostrap
+- Node JS
+- Mongoose
+- MongoDB
+- Express JS
 
 #Future Improvements
 -Improve features regarding updating team roster
